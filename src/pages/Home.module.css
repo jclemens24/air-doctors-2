@@ -1,0 +1,128 @@
+.main {
+  background-image: url(../images/bg-10.png);
+  background-repeat: no-repeat;
+  background-position: 75% 25%;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 600px;
+  position: relative;
+  backdrop-filter: blur(2px);
+  margin-bottom: 7rem;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #eaeaea;
+  height: 100%;
+  min-width: 100%;
+  opacity: 0.7;
+  z-index: -1;
+}
+
+.sectionHero {
+  display: flex;
+  justify-content: center;
+  min-height: 500px;
+}
+
+.leftBox {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.rightBox {
+  width: 50%;
+}
+
+.rightBox h1 {
+  margin-top: 2em;
+  color: #fff;
+}
+
+.topleftBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #252a34;
+  padding: 0.5em 0.5em;
+}
+
+.bottomleftBox {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 1em 0.5em;
+  color: #252a34;
+}
+
+.topleftBox p {
+  color: #fff;
+  font-size: 1.5em;
+  margin-bottom: 0.2em;
+  font-variant: small-caps;
+  font-family: 'Fira Sans';
+}
+
+.leftBoxList {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.leftBoxListAlign {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 0.8em;
+  font-size: 1.1em;
+  font-weight: 500;
+  font-variant: small-caps;
+}
+
+.bottomleftBox h3 {
+  transform: skewY(-3deg);
+  width: fit-content;
+  margin-bottom: 1em;
+}
+
+.bottomleftBox span {
+  color: #eaeaea;
+  font-size: 1.4em;
+  font-variant: small-caps;
+  padding: 0.5em 0.5em;
+  font-family: inherit;
+  background-image: linear-gradient(to right bottom, #252a34, #51555d);
+}
+
+@media only screen and (max-width: 1024px) {
+  .bottomleftBox span {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .sectionHero {
+    display: flex;
+    flex-direction: column;
+  }
+  .leftBox {
+    width: 100%;
+  }
+  .bottomleftBox span {
+    font-size: 14px;
+  }
+
+  .bottomleftBox h2 {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .rightBox {
+    width: 100%;
+  }
+}

@@ -1,0 +1,41 @@
+.headerLink {
+  text-decoration: none;
+  font-size: 1.125em;
+  transition: transform 200ms;
+  color: #252a34;
+}
+
+.headerLink:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.headerList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.headerList li {
+  margin-right: 2em;
+  font-weight: 700;
+}
+
+.headerList:last-child {
+  margin-right: 0;
+}
+
+@media only screen and (max-width: 1024px) {
+  .headerList {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .headerList li {
+    margin-bottom: 1em;
+  }
+}

@@ -1,0 +1,43 @@
+.sectionService {
+  padding: 2em 2em;
+  background-color: #252a34;
+}
+
+.serviceContainer {
+  padding: 2em 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+  gap: 2em;
+  align-items: center;
+}
+
+.serviceContainerItem {
+  flex: 1 0;
+  max-width: 300px;
+}
+
+.sectionServiceHeader {
+  text-align: center;
+  color: #eaeaea;
+}
+
+@media only screen and (max-width: 768px) {
+  .sectionService {
+    padding: 1em 0.5;
+  }
+  .serviceContainer {
+    padding: 1em 0;
+    flex-wrap: wrap;
+  }
+
+  .serviceContainerItem {
+    flex: 1;
+  }
+
+  .serviceContainerItem svg {
+    height: 2em;
+    width: 2em;
+  }
+}

@@ -1,0 +1,46 @@
+.animatedHeaderSVG {
+  display: inline-block;
+  font: 5em 'Fira Sans';
+  text-transform: uppercase;
+  margin: 0 auto;
+}
+
+.text {
+  fill: none;
+  stroke: white;
+  stroke-dasharray: 6% 29%;
+  stroke-width: 5px;
+  stroke-dashoffset: 0%;
+  animation: stroke-offset 5.5s infinite linear;
+}
+
+.text:nth-child(1) {
+  stroke: #eaeaea;
+  animation-delay: -1;
+}
+
+.text:nth-child(2) {
+  stroke: #5e5e5e;
+  animation-delay: -2s;
+}
+
+.text:nth-child(3) {
+  stroke: #ff82a1;
+  animation-delay: -3s;
+}
+
+.text:nth-child(4) {
+  stroke: #ff2e63;
+  animation-delay: -4s;
+}
+
+.text:nth-child(5) {
+  stroke: #08d9d6;
+  animation-delay: -5s;
+}
+
+@keyframes stroke-offset {
+  100% {
+    stroke-dashoffset: -35%;
+  }
+}

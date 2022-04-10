@@ -1,0 +1,37 @@
+.topbar {
+  padding: 0.5em 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #eaeaea;
+  color: #252a34;
+  font-family: 'Fira Sans';
+  font-weight: 500;
+  font-size: 1em;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  font-style: italic;
+}
+
+.phone {
+  display: flex;
+  align-items: center;
+}
+
+.phone a {
+  text-decoration: none;
+  color: #252a34;
+}
+
+.phone a:hover {
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 768px) {
+  .topbar {
+    font-size: 12px;
+  }
+}

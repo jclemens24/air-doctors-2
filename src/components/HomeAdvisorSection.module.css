@@ -1,0 +1,55 @@
+.sectionHomeAdvisor {
+  background-color: #eaeaea;
+  padding: 2em 2em;
+  color: #252a34;
+  background-image: url(../images/164.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.sectionCustomerServiceHeader {
+  text-align: center;
+}
+
+.sectionCustomerServiceRow {
+  padding: 1em 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.sectionCustomerServiceItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sectionCustomerServiceItem a:hover {
+  cursor: pointer;
+  transform: translateY(-2px);
+  transition: all 200ms;
+}
+
+.sectionCustomerServiceItem p {
+  font-variant: small-caps;
+  font-size: 1.125em;
+  font-weight: 700;
+}
+
+.stars {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0.5em 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .sectionHomeAdvisor {
+    background-image: none;
+  }
+
+  .sectionCustomerServiceRow {
+    padding: 0.5rem;
+    justify-content: space-between;
+  }
+}
