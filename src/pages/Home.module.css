@@ -7,6 +7,7 @@
   min-height: 600px;
   position: relative;
   backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
   margin-bottom: 7rem;
 }
 
@@ -22,13 +23,22 @@
 }
 
 .sectionHero {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   min-height: 500px;
 }
 
 .leftBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   width: 50%;
 }
@@ -43,18 +53,36 @@
 }
 
 .topleftBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   background-color: #252a34;
   padding: 0.5em 0.5em;
 }
 
 .bottomleftBox {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
   flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
   justify-content: space-evenly;
   padding: 1em 0.5em;
   color: #252a34;
@@ -70,13 +98,24 @@
 
 .leftBoxList {
   list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 
 .leftBoxListAlign {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
   margin-bottom: 0.8em;
   font-size: 1.1em;
@@ -85,7 +124,11 @@
 }
 
 .bottomleftBox h3 {
+  -webkit-transform: skewY(-3deg);
+  -ms-transform: skewY(-3deg);
   transform: skewY(-3deg);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   margin-bottom: 1em;
 }
@@ -96,6 +139,14 @@
   font-variant: small-caps;
   padding: 0.5em 0.5em;
   font-family: inherit;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right bottom,
+    from(#252a34),
+    to(#51555d)
+  );
+  background-image: -o-linear-gradient(left top, #252a34, #51555d);
   background-image: linear-gradient(to right bottom, #252a34, #51555d);
 }
 
@@ -107,7 +158,12 @@
 
 @media only screen and (max-width: 768px) {
   .sectionHero {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
   .leftBox {
