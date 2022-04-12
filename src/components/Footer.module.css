@@ -25,6 +25,10 @@
   align-self: center;
 }
 
+.footerLinks p {
+  margin-bottom: 0.5em;
+}
+
 .footerLink {
   transition: all 200ms;
 }

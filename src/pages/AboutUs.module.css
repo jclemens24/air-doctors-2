@@ -1,0 +1,160 @@
+.main {
+  margin-bottom: 7rem;
+}
+
+.aboutUsContainer {
+  clip-path: polygon(100% 0, 100% 70%, 0 100%, 0 0);
+  display: flex;
+  justify-content: center;
+  min-height: 930px;
+}
+
+.leftBox {
+  padding: 2em 2em;
+  flex: 1 0;
+  background-color: #252a34;
+  background-image: url(../images/Agreement.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: scroll;
+}
+
+.rightBox {
+  padding: 2em 2em;
+  flex: 1 0;
+  background-color: #eaeaea;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rightBox h1 {
+  color: #252a34;
+  font-variant: small-caps;
+  font-size: 3em;
+  font-weight: 700;
+  text-shadow: -1px -1px 0 #eaeaea, 3px 3px 0px #08d9d6, 6px 6px 0 #ff2e63;
+  margin-bottom: 1em;
+}
+
+.rightBox p {
+  font-size: 1.2em;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.container {
+  padding: 2em 2em;
+}
+
+.title {
+  text-align: center;
+  padding: 1em 0;
+  color: #252a34;
+  font-variant: small-caps;
+  font-size: 2em;
+}
+
+.containerCards {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.cardItem {
+  flex: 0 1 230px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardSummary {
+  margin-top: 1.5em;
+  flex: 0 1 210px;
+  color: #252a34;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.teamContainer {
+  background-color: #252a34;
+  padding: 2em 3em;
+}
+
+.meetTheTeam {
+  display: grid;
+  margin: 0 auto;
+  grid-template-areas:
+    'first second'
+    'first third';
+  justify-items: center;
+  align-items: center;
+  row-gap: 20px;
+}
+
+.teamImg {
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  width: 16rem;
+  height: 16rem;
+}
+
+.bottomImg {
+  object-fit: cover;
+  border-radius: 12px;
+  border: 5px solid #fff;
+}
+
+.firstImg {
+  grid-area: first;
+  flex: 1;
+}
+
+.secondImg {
+  grid-area: second;
+}
+
+.thirdImg {
+  grid-area: third;
+}
+
+@media only screen and (max-width: 1024px) {
+  .meetTheTeam {
+    display: flex;
+    flex-direction: column;
+  }
+  .bottomImg {
+    width: 90%;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .aboutUsContainer {
+    clip-path: polygon(100% 0, 100% 80%, 0 100%, 0 0);
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    min-height: 1200px;
+  }
+  .leftBox {
+    background-size: cover;
+    flex: 1 0 auto;
+  }
+
+  .rightBox {
+    flex: 0 0 auto;
+  }
+  .containerCards {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .cardSummary {
+    flex: 0 0 auto;
+  }
+}

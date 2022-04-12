@@ -1,4 +1,5 @@
 import classes from './FormSection.module.css';
+import { forwardRef } from 'react';
 import Button from '../UI/Button';
 import CalendarImage from '../images/55.png';
 import {
@@ -15,7 +16,7 @@ import * as Yup from 'yup';
 import TextInput from '../UI/TextInput';
 import { useState } from 'react';
 
-const FormSection = () => {
+const FormSection = forwardRef((props, ref) => {
   const [focusForm, setFocusForm] = useState(false);
 
   const handleClick = () => {
@@ -24,7 +25,7 @@ const FormSection = () => {
     });
   };
   return (
-    <section className={classes.formSection}>
+    <section ref={ref} className={classes.formSection}>
       <div className={classes.overlap}></div>
       <div className={classes.wrapper}>
         <div className={!focusForm ? classes.content : classes.contentFocused}>
@@ -168,6 +169,6 @@ const FormSection = () => {
       </div>
     </section>
   );
-};
+});
 
 export default FormSection;

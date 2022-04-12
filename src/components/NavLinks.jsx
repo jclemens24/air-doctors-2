@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import classes from './NavLinks.module.css';
 import Button from '../UI/Button';
 
-const NavLinks = () => {
+const NavLinks = props => {
   const navLinkItems = ['Home', 'About', 'Services', 'Specials'];
   return (
     <ul className={classes.headerList}>
@@ -22,7 +22,9 @@ const NavLinks = () => {
         </li>
       ))}
       <li>
-        <Button type='button'>Contact Us</Button>
+        <Button onClick={props.onClick} type='button'>
+          Contact Us
+        </Button>
       </li>
     </ul>
   );

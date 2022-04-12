@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import classes from './Home.module.css';
+import MainNavigation from '../components/MainNavigation';
 import Map from '../components/Map';
 import AnimatedHeader from '../UI/AnimatedHeader';
 import {
@@ -13,8 +14,14 @@ import FormSection from '../components/FormSection';
 import Footer from '../components/Footer';
 
 const Home = () => {
+  const scrollRef = useRef();
+
+  const handleScroll = () => {
+    scrollRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
   return (
     <React.Fragment>
+      <MainNavigation onClick={handleScroll} />
       <main className={classes.main}>
         <div className={classes.overlay}></div>
         <section className={classes.sectionHero}>
@@ -72,7 +79,7 @@ const Home = () => {
         </section>
         <ServiceSection />
         <HomeAdvisorSection />
-        <FormSection />
+        <FormSection ref={scrollRef} />
       </main>
       <Footer />
     </React.Fragment>

@@ -32,7 +32,7 @@ const MainNavigation = props => {
           </div>
         </div>
         <nav className={classes.nav}>
-          <NavLinks />
+          <NavLinks onClick={props.onClick} />
           <button onClick={handleSideDrawer} className={classes.drawerButton}>
             <span />
             <span />

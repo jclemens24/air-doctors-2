@@ -1,4 +1,5 @@
 import classes from './Footer.module.css';
+import FacebookIcon from './FacebookIcon';
 
 const Footer = () => {
   return (
@@ -15,7 +16,7 @@ const Footer = () => {
           target='_blank'
           rel='noreferrer'
           className={classes.footerLink}>
-          {/* <img src={} width='50px' alt='Follow us on Facebook' /> */}
+          <FacebookIcon />
         </a>
       </div>
       <div className={classes.attribution}>
