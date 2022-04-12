@@ -14,7 +14,7 @@ import {
 
 const selectOptions = ['Quote', 'Service', 'Repair'];
 
-const DialogModal = props => {
+const DialogModal = ({ open, onClose }) => {
   const [selectOpen, setSelectOpen] = useState(false);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -39,7 +39,7 @@ const DialogModal = props => {
   };
 
   return (
-    <Dialog open={props.open} onClose={props.onClose}>
+    <Dialog open={open} onClose={onClose}>
       <DialogTitle sx={{ textAlign: 'center' }}>
         SCHEDULE A QUOTE OR SERVICE
       </DialogTitle>
