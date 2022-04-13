@@ -11,6 +11,7 @@ import {
   InputLabel,
   FormControl
 } from '@mui/material';
+import Button from '../UI/Button';
 
 const selectOptions = ['Quote', 'Service', 'Repair'];
 
@@ -43,7 +44,12 @@ const DialogModal = ({ open, onClose }) => {
       <DialogTitle sx={{ textAlign: 'center' }}>
         SCHEDULE A QUOTE OR SERVICE
       </DialogTitle>
-      <DialogContent>
+      <DialogContent
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center'
+        }}>
         <DialogContentText>
           Please fill out the form and select a date, time and reason. After
           submitting, we will send confirmation details to the email provided.
@@ -78,6 +84,7 @@ const DialogModal = ({ open, onClose }) => {
         <InputLabel id='reason'>Reason for Appointment</InputLabel>
         <FormControl margin='normal' sx={{ width: '100%' }}>
           <Select
+            fullWidth
             open={selectOpen}
             onOpen={handleSelect}
             onClose={handleSelect}
@@ -93,6 +100,12 @@ const DialogModal = ({ open, onClose }) => {
             ))}
           </Select>
         </FormControl>
+        <DialogActions>
+          <Button type='submit'>Submit</Button>
+          <Button onClick={onClose} type='button'>
+            Close
+          </Button>
+        </DialogActions>
       </DialogContent>
     </Dialog>
   );

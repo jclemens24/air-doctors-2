@@ -44,7 +44,7 @@ const MainNavigation = props => {
           {drawer && (
             <SideDrawer onClick={handleSideDrawer} show={drawer}>
               <nav className={classes.navDrawer}>
-                <NavLinks />
+                <NavLinks onClick={props.onClick} />
               </nav>
             </SideDrawer>
           )}

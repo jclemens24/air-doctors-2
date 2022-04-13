@@ -34,7 +34,9 @@ const Button = ({
   }
   return (
     <button
-      className={`${classes.button} ${inverse && classes['button--inverse']}`}
+      className={`${classes.button} ${
+        inverse ? classes['button--inverse'] : ''
+      }`}
       type={type}
       onClick={onClick}
       disabled={disabled}
