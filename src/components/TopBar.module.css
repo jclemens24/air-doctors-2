@@ -2,7 +2,7 @@
   padding: 0.5em 1em;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   background-color: #eaeaea;
   color: #252a34;
   font-family: 'Fira Sans';
@@ -13,12 +13,23 @@
 .location {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   font-style: italic;
+  flex: 1;
+}
+
+.switch {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .phone {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
+  flex: 1;
 }
 
 .phone a {
