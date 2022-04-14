@@ -1,5 +1,5 @@
 import classes from './AboutUs.module.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import MainNavigation from '../components/MainNavigation';
 import Card from '../components/Card';
 import {
@@ -23,6 +23,10 @@ const AboutUs = () => {
   const handleClick = () => {
     setOpen(true);
   };
+
+  useEffect(() => {
+    document.title = 'Air Doctors Heating & Cooling | About Us';
+  }, []);
 
   return (
     <React.Fragment>

@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import classes from './Home.module.css';
 import MainNavigation from '../components/MainNavigation';
 import Map from '../components/Map';
@@ -19,6 +19,10 @@ const Home = () => {
   const handleScroll = () => {
     scrollRef.current.scrollIntoView({ behavior: 'smooth' });
   };
+
+  useEffect(() => {
+    document.title = 'Air Doctors Heating & Cooling | Home';
+  }, []);
   return (
     <React.Fragment>
       <MainNavigation onClick={handleScroll} />
