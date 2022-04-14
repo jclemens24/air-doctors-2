@@ -6,6 +6,7 @@ import { MedicalServicesRounded } from '@mui/icons-material';
 import TopBar from './TopBar';
 import Backdrop from '../UI/Backdrop';
 import SideDrawer from '../UI/SideDrawer';
+import { Link } from 'react-router-dom';
 
 const MainNavigation = props => {
   const [drawer, setDrawer] = useState(false);
@@ -24,10 +25,12 @@ const MainNavigation = props => {
           <div className={classes.airDoctorsDiv}>
             <MedicalServicesRounded className={classes.airDoctorsIcon} />
             <h1 className={classes.title}>
-              <span>Air Doctors</span>
-              <span className={classes.heatingAndCooling}>
-                Heating &amp; Cooling
-              </span>
+              <Link className={classes.index} to={'/'}>
+                <span>Air Doctors</span>
+                <span className={classes.heatingAndCooling}>
+                  Heating &amp; Cooling
+                </span>
+              </Link>
             </h1>
           </div>
         </div>

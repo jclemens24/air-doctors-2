@@ -16,6 +16,19 @@
   line-height: 2;
 }
 
+.index {
+  transition: all 200ms;
+}
+
+.index:link {
+  text-decoration: none;
+}
+
+.index:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
 .heatingAndCooling {
   font-family: 'Pacifico';
   font-size: 0.8em;
