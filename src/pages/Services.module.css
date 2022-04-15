@@ -1,5 +1,100 @@
 .main {
-  padding: 2em 2em;
   background-color: #252a34;
   min-height: 600px;
+  margin-bottom: 7em;
+  position: relative;
+}
+
+.headerBar {
+  background-image: url(../images/service-header.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 20%;
+  background-size: cover;
+  position: relative;
+  min-height: 150px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 150px;
+  width: 100%;
+  background-color: #252a34;
+  opacity: 0.6;
+}
+
+.headerText {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 150px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  backdrop-filter: blur(2px);
+}
+
+.services {
+  color: #252a34;
+  font-variant: small-caps;
+  font-size: 4em;
+  font-weight: 700;
+  text-shadow: -1px -1px 0 #eaeaea, 3px 3px 0px #08d9d6, 6px 6px 0 #ff2e63;
+}
+
+.residential {
+  padding: 2em 2em;
+}
+
+.residential h1 {
+  text-align: center;
+  color: #eaeaea;
+  font-variant: small-caps;
+  font-size: 2.4em;
+  font-weight: 700;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
+}
+
+.leftBox {
+  width: 40%;
+  color: #eaeaea;
+  line-height: 1.5;
+  padding: 0 0.5em;
+}
+
+.rightBox {
+  flex: 1;
+}
+
+.cardHeader {
+  margin-bottom: 0.5em;
+}
+
+.cardList {
+  list-style-type: none;
+}
+
+.cardItem {
+  display: flex;
+  align-items: center;
+}
+
+.commercial {
+  padding: 2em 2em;
+}
+
+.commercial h1 {
+  text-align: center;
+  color: #eaeaea;
+  font-variant: small-caps;
+  font-size: 2.4em;
+  font-weight: 700;
 }
