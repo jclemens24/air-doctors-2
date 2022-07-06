@@ -30,7 +30,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint:markdown": "markdownlint-cli2"
   },
   "eslintConfig": {
     "extends": [
@@ -54,6 +55,7 @@
   "devDependencies": {
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
+    "markdownlint-cli2": "^0.4.0",
     "prettier": "^2.6.2"
   }
 }
