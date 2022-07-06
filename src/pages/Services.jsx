@@ -1,15 +1,33 @@
-import { Fragment } from 'react';
+import { Fragment, useEffect, useState } from 'react';
 import classes from './Services.module.css';
 import MainNavigation from '../components/MainNavigation';
 import Footer from '../components/Footer';
 import Card from '../components/Card';
 import { ArrowCircleRightRounded } from '@mui/icons-material';
 import { Divider } from '@mui/material';
+import DialogModal from '../UI/DialogModal';
 
 const Services = () => {
+  const [open, setOpen] = useState(false);
+
+  const handleClose = () => {
+    setOpen(prevState => {
+      return !prevState;
+    });
+  };
+
+  const handleClick = () => {
+    setOpen(true);
+  };
+
+  useEffect(() => {
+    document.title = 'Air Doctors Heating & Cooling | Services';
+  }, []);
+
   return (
     <Fragment>
-      <MainNavigation />
+      <DialogModal open={open} onClose={handleClose} />
+      <MainNavigation onClick={handleClick} />
       <main className={classes.main}>
         <div className={classes.headerBar}>
           <div className={classes.overlay}></div>

@@ -50,6 +50,11 @@ const DialogModal = ({ open, onClose }) => {
   const handleSubmit = event => {
     event.preventDefault();
     console.log(name, email, reason, dateTime);
+    setName('');
+    setEmail('');
+    setReason('');
+    setDateTime(null);
+    onClose();
   };
 
   return (
@@ -79,9 +84,11 @@ const DialogModal = ({ open, onClose }) => {
             value={name}
             placeholder='Bob Smith'
             required
+            autoComplete='name'
+            inputProps={{ inputMode: 'text', pattern: '[A-Za-z A-Za-z]+' }}
           />
           <TextField
-            error
+            inputProps={{ inputMode: 'email' }}
             helperText='incorrect entry'
             margin='normal'
             id='email'
@@ -93,6 +100,7 @@ const DialogModal = ({ open, onClose }) => {
             value={email}
             placeholder='you@example.com'
             required
+            autoComplete='email'
           />
           <InputLabel id='reason'>Reason for Appointment</InputLabel>
           <FormControl margin='normal' sx={{ width: '100%' }}>
@@ -106,7 +114,8 @@ const DialogModal = ({ open, onClose }) => {
               label={'Reason'}
               onChange={getReasonValue}
               required
-              labelId='reason'>
+              labelId='reason'
+              defaultValue='Repair'>
               {selectOptions.map(option => (
                 <MenuItem key={option} value={option}>
                   {option}

@@ -5,8 +5,8 @@
   color: #252a34;
 }
 
-.headerLink:hover {
-  transform: scale(1.1, 1.1);
+.headerList > li:hover {
+  transform: scale(1.2);
 }
 
 .headerList {
