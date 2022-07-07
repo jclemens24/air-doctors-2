@@ -11,6 +11,16 @@ import {
 } from '@mui/icons-material';
 
 const ServiceSection = () => {
+  const handleMouseOver = event => {
+    const card = event.currentTarget;
+    card.style.transform = 'scale(1.1)';
+    return;
+  };
+
+  const handleMouseOut = event => {
+    const card = event.currentTarget;
+    card.style.transform = 'scale(1)';
+  };
   return (
     <section className={classes.sectionService}>
       <h2 className={classes.sectionServiceHeader}>
@@ -24,7 +34,9 @@ const ServiceSection = () => {
               flexDirection: 'column',
               alignItems: 'center',
               justifyContent: 'center'
-            }}>
+            }}
+            onMouseOver={handleMouseOver}
+            onMouseOut={handleMouseOut}>
             <ThermostatRounded
               sx={{
                 height: '3em',
@@ -44,7 +56,9 @@ const ServiceSection = () => {
               flexDirection: 'column',
               alignItems: 'center',
               justifyContent: 'center'
-            }}>
+            }}
+            onMouseOver={handleMouseOver}
+            onMouseOut={handleMouseOut}>
             <HandymanRounded
               sx={{
                 height: '3em',
@@ -65,7 +79,9 @@ const ServiceSection = () => {
               flexDirection: 'column',
               alignItems: 'center',
               justifyContent: 'center'
-            }}>
+            }}
+            onMouseOver={handleMouseOver}
+            onMouseOut={handleMouseOut}>
             <HvacRounded
               sx={{
                 height: '3em',
@@ -87,7 +103,9 @@ const ServiceSection = () => {
               flexDirection: 'column',
               alignItems: 'center',
               justifyContent: 'center'
-            }}>
+            }}
+            onMouseOver={handleMouseOver}
+            onMouseOut={handleMouseOut}>
             <ArticleRounded
               sx={{
                 height: '3em',
@@ -107,7 +125,9 @@ const ServiceSection = () => {
               flexDirection: 'column',
               alignItems: 'center',
               justifyContent: 'center'
-            }}>
+            }}
+            onMouseOver={handleMouseOver}
+            onMouseOut={handleMouseOut}>
             <AirRounded
               sx={{
                 height: '3em',
@@ -127,7 +147,9 @@ const ServiceSection = () => {
               flexDirection: 'column',
               alignItems: 'center',
               justifyContent: 'center'
-            }}>
+            }}
+            onMouseOver={handleMouseOver}
+            onMouseOut={handleMouseOut}>
             <EngineeringRounded
               sx={{
                 height: '3em',

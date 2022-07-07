@@ -21,11 +21,9 @@ const NavLinks = props => {
           </NavLink>
         </li>
       ))}
-      <li>
-        <Button onClick={props.onClick} type='button'>
-          Contact Us
-        </Button>
-      </li>
+      <Button onClick={props.onClick} type='button'>
+        Contact Us
+      </Button>
     </ul>
   );
 };
