@@ -10,7 +10,7 @@
 }
 
 .logo {
-  font-size: 1em;
+  font-size: 1.2em;
   font-weight: 700;
   letter-spacing: 0.5px;
   line-height: 2;
@@ -54,6 +54,12 @@
   display: none;
 }
 
+@media only screen and (max-width: 1070px) {
+  .logo {
+    font-size: 1em;
+  }
+}
+
 @media only screen and (max-width: 1024px) {
   .drawerButton {
     width: 3em;
@@ -62,7 +68,7 @@
     border: none;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     margin: 0 2em;
     cursor: pointer;
   }
@@ -79,7 +85,7 @@
   }
 
   .logo {
-    font-size: 1.2em;
+    font-size: 1.4em;
   }
 }
 

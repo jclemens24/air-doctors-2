@@ -3,10 +3,10 @@
 }
 
 .aboutUsContainer {
-  clip-path: polygon(100% 0, 100% 70%, 0 100%, 0 0);
+  clip-path: polygon(100% 0, 100% 85%, 0 100%, 0 0);
   display: flex;
   justify-content: center;
-  min-height: 930px;
+  min-height: 49em;
 }
 
 .leftBox {
